@@ -93,5 +93,5 @@ app.use(function(err, req, res, next) {
   res.render("error");
 });
 
-app.listen(7000);
+app.listen(7000 || process.env.PORT);
 module.exports = app;
