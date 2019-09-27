@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  main
+    header
+      .wrapper
+        .container
+          .row.justify-content-center
+            .col-md-6.brand-identity
+              .logo
+                img(class="img-fluid" src="../images/logo.png" alt="LOGO")
+              h1 UNO Market
+              p Buy whatever you need in one place.
+            .col-md-6.login-form
+              if flashes
+                each flash in flashes
+                    div(class="alert alert-warning alert-dismissible fade show", role="alert") #{flash}
+                        button(type="button", class="close", data-dismiss="alert", aria-label="Close")
+                        span(aria-hidden="true") 
+                        i(class="fas fa-window-close")
+              form(action="/users/login" method="POST" class="form")
+                .form-group
+                  label(for="username") Username
+                  input(type="text" name="username" placeholder="Enter Your Username" class="form-control")
+                .form-group
+                  label(for="password") Password
+                  input(type="password" name="password" placeholder="Enter Your Password" class="form-control")
+                button.btn.d-block Login
+                .new-user-notification.mt-4
+                  span.mr-2 New User?
+                  a(href="/users/signup") Sign Up
+                a(href="/users/forget").btn.forget-btn.mt-4 Forget Your Password ?

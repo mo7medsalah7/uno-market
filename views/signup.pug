@@ -1,0 +1,30 @@
+extends layout
+
+block content
+   header
+    .wrapper
+        .container
+            .row.justify-content-center
+                .col-md-4
+                    .signup-form
+                        if errors
+                            each error in errors
+                                div(class="alert alert-warning alert-dismissible fade show", role="alert") #{error.msg}
+                                    button(type="button", class="close", data-dismiss="alert", aria-label="Close")
+                                    span(aria-hidden="true") 
+                                    i(class="fas fa-window-close")
+                        span.display-4.mb-4.text-center Sign up
+                        form(action="/users/signup" method="POST")
+                            .form-group
+                                label(for="username") user name
+                                input(type="text" name="username" class="form-control" value=oldInputs.username)
+                            .form-group
+                                label(for="email") Email
+                                input(type="email" name="email" class="form-control" value=oldInputs.email)
+                            .form-group
+                                label(for="password") Password
+                                input(type="password" name="password" class="form-control")
+                            .form-group
+                                label(for="confirm-password") Confirm Password
+                                input(type="password" name="confirm-password" class="form-control")
+                            button.btn.d-block Sign Up

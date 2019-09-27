@@ -1,0 +1,16 @@
+extends layout
+block content
+    header
+        .wrapper
+            .container
+                .row.justify-content-center
+                    .col-md-6
+                        h2.text-center.mb-4 Enter New Password
+                        form(method="POST")
+                            .form-group
+                                label(for="password") New Password
+                                input(type="password" name="password" class="form-control")
+                            .form-group
+                            label(for="confirm-password") Confirm Password
+                            input(type="password" name="confirm-password" class="form-control")
+                            button.reset-btn.mt-4.btn Reset Password

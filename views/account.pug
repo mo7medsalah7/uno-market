@@ -1,0 +1,26 @@
+include ./navigation.pug 
+block content
+    section.featured-markets
+        .container
+            if flashes
+                each flash in flashes
+                    div(class="mt-4 alert alert-success alert-dismissible fade show", role="alert") #{flash}
+                        button(type="button", class="close", data-dismiss="alert", aria-label="Close")
+                        span(aria-hidden="true") 
+                        i(class="fas fa-window-close")
+            h2.mt-5 #{head}
+            .row.my-4
+                if items.length > 0
+                    each item in items
+                        .col-md-4
+                            .card.pt-4.mb-4.row
+                                h3.col-12 #{item.name}
+                                span.float-right.badge-dark.py-2.mb-2.text-center.d-block #{item.author.username}
+                                p.lead.col-12 #{item.description}
+                                img(src=`/uploads/${item.photo}`, alt=item.photo class="img-fluid")
+                                if item.author.equals(user._id)
+                                    a(href=`/users/add/${item.id}` class="edit-icon")  
+                                        img(src="../images/icons/edit.png", alt="Edit Icon" )
+                                span.price.col-12.py-2.text-center.badge-secondary #{item.price} $
+                else
+                    h3 No Items added yet

@@ -1,0 +1,19 @@
+extends layout
+block content
+    header
+        .wrapper
+            .container
+                .row.justify-content-center
+                    .col-md-6
+                        form(action="/users/forget" method="POST")
+                            .form-group
+                                label(for="email") Email
+                                input(type="email" name="email" class="form-control")
+                            .form-group
+                                button.btn.reset-btn Reset My password
+                            if flashes
+                                each flash in flashes
+                                    div(class="mt-4 alert alert-warning alert-dismissible fade show", role="alert") #{flash}
+                                        button(type="button", class="close", data-dismiss="alert", aria-label="Close")
+                                        span(aria-hidden="true") 
+                                        i(class="fas fa-window-close")

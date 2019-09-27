@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font: 14px "Panama", Helvetica, Arial, sans-serif;
+}
+input {
+  border-radius: 0;
+  border: 0;
+  outline: 0;
+  padding: 10px 8px;
+  font-size: 12px;
+  font-family: Poppins;
+}
+a {
+  color: #00b7ff;
+}
+header {
+  background-image: url("../images/header-background-1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  position: relative;
+  .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    .brand-identity {
+      text-align: center;
+      border-right: 6px solid #fff;
+      .logo {
+        margin-bottom: 1rem;
+      }
+    }
+    .login-form,
+    .signup-form {
+      padding: 2rem 1rem 0rem 3rem;
+      label {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 15px;
+      }
+      input,
+      textarea {
+        border-radius: 0;
+        border: 0;
+        outline: 0;
+        padding: 10px 8px;
+        font-size: 12px;
+        font-family: Poppins;
+      }
+    }
+    .btn {
+      background: #fff;
+      color: #47b3da;
+      border-radius: 0;
+      width: 100%;
+    }
+    .new-user-notification a {
+      color: #f2f4f6;
+      text-decoration: underline;
+    }
+    a.forget-btn,
+    .reset-btn {
+      background-image: radial-gradient(
+        circle farthest-corner at 10% 20%,
+        rgba(69, 86, 102, 1) 0%,
+        rgba(34, 34, 34, 1) 90%
+      );
+      color: #fff;
+    }
+  }
+}
+nav {
+  .bg-custom-1 {
+    background-color: #85144b;
+  }
+
+  .bg-custom-2 {
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  }
+}
+section.user-options {
+  .card {
+    background-image: radial-gradient(
+      circle farthest-corner at 10% 20%,
+      rgba(67, 144, 233, 1) 0%,
+      rgba(78, 226, 198, 1) 90.1%
+    );
+    text-decoration: none;
+    border: 0;
+    padding: 15px 15px;
+    .card-image {
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    .card-link {
+      p {
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+      }
+    }
+  }
+}
+.username {
+  border-bottom: 2px solid #333;
+  background: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(67, 144, 233, 1) 0%,
+    rgba(78, 226, 198, 1) 90.1%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card {
+  span.price {
+    background-image: radial-gradient(
+      circle farthest-corner at 10% 20%,
+      rgba(69, 86, 102, 1) 0%,
+      rgba(34, 34, 34, 1) 90%
+    );
+  }
+  a.edit-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.featured-markets {
+  h2 {
+    background: radial-gradient(
+      circle farthest-corner at 10% 20%,
+      rgba(67, 144, 233, 1) 0%,
+      rgba(78, 226, 198, 1) 90.1%
+    );
+    width: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

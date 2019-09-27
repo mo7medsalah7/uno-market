@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  main
+    header
+      .wrapper
+        .container
+          .row.justify-content-center
+            .col-md-6.brand-identity
+              .logo
+                img(class="img-fluid" src="../images/logo.png" alt="LOGO")
+              h1 UNO Market
+              p Buy whatever you need in one place.
+              if isLoggedIn
+                a(href="/users/account") Account
+              else
+                a(href="/users/login" class="mr-2") sign in
+                a(href="/users/signup") sign up

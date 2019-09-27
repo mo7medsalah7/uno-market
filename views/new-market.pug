@@ -1,0 +1,18 @@
+include ./navigation.pug 
+block content
+    .container
+        .new-market.my-5
+            form(action="/users/add" method="POST" enctype="multipart/form-data")
+                .form-group
+                    label(for="name") Item name
+                    input(type="text" name="name" class="form-control")
+                .form-group
+                    label(for="description") Description
+                    textarea(cols="5" rows="5" name="description" class="form-control")
+                .form-group
+                    label(for="photo") Upload Photo
+                    input(type="file" name="photo" class="form-control")
+                .form-group
+                    label(for="price") Price in $
+                    input(type="text" name="price" class="form-control")
+                button.btn.d-block Add

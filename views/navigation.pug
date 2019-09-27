@@ -1,0 +1,48 @@
+extends layout
+block content
+    nav.navbar.navbar-dark.bg-dark.navbar-expand-sm
+        a.navbar-brand(href='/')
+            img(src='../images/logo.png' width='30' height='30' alt='logo')
+            |     UNO Market
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar-list-2' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbar-list-2.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item.active
+                    a.nav-link(href='/users/account')
+                        | Home
+                        span.sr-only (current)
+                li.nav-item
+                    a.nav-link(href='/users/browse') Browse
+                li.nav-item
+                    a.nav-link(href='/users/logout') Logout
+    .welcoming-user.my-5
+        .container
+            .row
+                h2 Welcome, &nbsp;
+                span(class="username h2") #{user.username}
+                h2 &nbsp; To dashboard
+    section.user-options
+        .container
+            .row.justify-content-center
+                .col-md-4
+                    a.card(href="/users/add")
+                        .row.align-items-center
+                            .card-image.col-md-4
+                                img(src="../images/icons/plus.png", alt="" class="img-fluid")
+                            .card-link.col-md-8
+                                p Add To Market
+                .col-md-4
+                    a.card(href="/users/browse")
+                        .row.align-items-center
+                            .card-image.col-md-4
+                                img(src="../images/icons/browse.png", alt="" class="img-fluid")
+                            .card-link.col-md-8
+                                p Browse
+                .col-md-4
+                    a.card(href="/")
+                        .row.align-items-center
+                            .card-image.col-md-4
+                                img(src="../images/icons/cash.png", alt="" class="img-fluid")
+                            .card-link.col-md-8
+                                p My Wallet
