@@ -54,8 +54,6 @@ app.use(
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
 
 // pass variables to our templates + all requests
 app.use((req, res, next) => {
@@ -65,6 +63,8 @@ app.use((req, res, next) => {
   res.locals.currentPath = req.path;
   next();
 });
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
 
 mongoose
   .connect(MongoURI, {
