@@ -10,6 +10,7 @@ const MongoDBStore = require("connect-mongodb-session")(session);
 const flash = require("connect-flash");
 const passport = require("passport");
 const mongoose = require("mongoose");
+const favicon = require("serve-favicon");
 // import environmental variables from our variables.env file
 require("dotenv").config({ path: "variables.env" });
 
@@ -36,6 +37,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(favicon(__dirname + "/public/images/favicon.ico"));
 
 app.use(expressValidator());
 app.use(cookieParser());
@@ -93,9 +95,9 @@ app.use(function(err, req, res, next) {
   res.render("error");
 });
 
-const port = 7000 || process.env.PORT;
+const PORT = 7000 || process.env.PORT;
 
-app.listen(port, () => {
-  console.log(`App is Running on Port ${port}`);
+app.listen(PORT, () => {
+  console.log(`App is Running on Port ${PORT}`);
 });
 module.exports = app;
