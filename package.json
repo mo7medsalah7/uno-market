@@ -21,7 +21,7 @@
     "http-errors": "^1.6.3",
     "jimp": "^0.8.2",
     "md5": "^2.2.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "mongoose": "^5.4.10",
     "mongoose-mongodb-errors": "0.0.2",
     "morgan": "^1.9.1",
